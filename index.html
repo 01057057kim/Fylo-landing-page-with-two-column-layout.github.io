@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .grid-col {
+      display: grid;
+      grid-template-areas:
+        "a-col b-col";
+      gap: 0px;
+    }
+
+    .a-col {
+      grid-area: a-col;
+    }
+
+    .b-col {
+      grid-area: b-col;
+    }
+
+    .grid-row {
+      display: grid;
+      grid-template-areas:
+        "a-row"
+        "b-row"
+        "c-row"
+        "d-row"
+        "e-row";
+      gap: 0px;
+    }
+
+    .a-row {
+      grid-area: a-row;
+    }
+
+    .b-row {
+      grid-area: b-row;
+    }
+
+    .c-row {
+      grid-area: c-row;
+    }
+
+    .d-row {
+      grid-area: d-row;
+    }
+
+    .e-row {
+      grid-area: e-row;
+    }
+  </style>
+
+</head>
+
+<body class="m-0 p-0 box-border">
+  <main class="grid-row">
+    <!------------------------------------------------------------------------------------------------>
+    <nav class="a-row bg-white font-raleway">
+      <div class="flex justify-between md:px-20 md:py-10 items-center px-7 py-10">
+        <img src="./images/logo.svg" width="150" height="150" alt="logo" />
+        <div class="flex md:gap-14 gap-6">
+          <a class="hover:text-d-blue" href="#">Features</a>
+          <a class="hover:text-d-blue" href="#">Team</a>
+          <a class="hover:text-d-blue" href="#">Sign In</a>
+        </div>
+      </div>
+    </nav>
+    <!------------------------------------------------------------------------------------------------>
+    <div class="b-row bg-white font-openSans">
+      <section class="grid-col flex flex-col px-20 items-center md:justify-between justify-center pb-20">
+        <section class="a-col max-w-[550px] md:text-start text-center md:w-[550px] w-[768x]">
+          <img class="block md:hidden py-20 " src="./images/illustration-1.svg" width="500px" height="500px"
+            alt="illustration-1" />
+
+          <h1 class="font-bold text-4xl md:pb-5 pb-10 md:leading-relaxed">All your files in one secure location,
+            accessible anywhere.</h1>
+          <p class="md:pb-5 pb-10 text-[17px]">Fylo stores your most important files in one secure location.
+            Access them wherever you need, share and collaborate with friends,
+            family, and co-workers.</p>
+
+          <div class="md:flex md:flex-row flex flex-col gap-5">
+            <input class="border border-black rounded px-5 py-2 md:px-3 md:py-1 md:mr-3 md:min-w-[300px]" type="email"
+              required placeholder="Enter your email...">
+            <button onclick="document.getElementById('msg').style.display = 'block'"
+              class="border border-transparent rounded bg-b-blue px-5 py-2 md:px-12 md:py-1 text-white">Get
+              Started</button>
+          </div>
+          <p id="msg" class="hidden text-[14px] text-red-500/80">Please Check your email</p>
+        </section>
+        <section class="b-col md:w-[550px]">
+          <img class="hidden md:block md:object-cover md:w-full md:pl-10" src="./images/illustration-1.svg"
+            width="500px" height="500px" alt="illustration-1" />
+        </section>
+      </section>
+      <img class="hidden md:block w-full" src="images/bg-curve-desktop.svg" alt="background-curve-desktop" />
+      <img class="block md:hidden w-full" src="images/bg-curve-mobile.svg" alt="background-curve-mobile" />
+    </div>
+
+    <!------------------------------------------------------------------------------------------------>
+    <div class="c-row bg-l-g-blue">
+      <section class="grid-col flex flex-col px-18 md:px-20 items-center md:justify-between justify-center pb-20">
+        <section class="a-col max-w-[550px] text-start md:w-[550px] w-[768x]">
+          <img class="block md:hidden py-20 " src="./images/illustration-2.svg" width="500px" height="500px"
+            alt="illustration-1" />
+          <h1 class="font-bold text-2xl md:text-[38px] pb-10 md:pb-10 md:pb-10 md:w-[750px] md:text-start text-center">
+            Stay productive, wherever you are</h1>
+          <p class="md:pb-5  pb-5 text-[17px]">Never let location be an issue when accessing your files. Fylo has you
+            covered for all of your file storage needs.</p>
+          <p class="md:pb-5  pb-10 text-[17px]">Securely share files and folders with friends, family and colleagues for
+            live collaboration. No email attachments required!</p>
+
+          <table class="flex justify-center text-center items-center pb-14 w-full md:text-start md:justify-start">
+            <tr class="border-b-2 border-solid border-green-500 cursor-pointer hover:opacity-[60%]">
+              <th><a class="text[14px] text-green-500" href="#">See how Fylo works</a></th>
+              <th><img class="ml-2 mt-1" src="images/icon-arrow.svg" alt="arrow"></th>
+            </tr>
+          </table>
+
+          <div
+            class="bg-white border border-transparent border-solid rounded-lg px-12 py-10 max-w-[600px] md:max-w-[450px] shadow-lg">
+            <img class="mb-3 " src="images/icon-quotes.svg" width="20px" height="20px" alt="quotes">
+            <p class="font-medium leading-8 pb-5">Fylo has improved our team productivity by an order of magnitude.
+              Since
+              making the switch our team has become a well-oiled collaboration machine.</p>
+            <div class="flex">
+              <img class="rounded-full" src="./images/avatar-testimonial.jpg" width="40px" height="40px" alt="avatar">
+              <div class="flex flex-col ml-4">
+                <p class="font-bold">Kyle Burton</p>
+                <p class="text-sm">Founder & CEO, Huddle</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="b-col md:w-[550px]">
+          <img class="hidden md:block md:object-cover md:w-full md:pl-10" src="./images/illustration-2.svg"
+            width="500px" height="500px" alt="illustration-1" />
+        </section>
+      </section>
+    </div>
+    <!------------------------------------------------------------------------------------------------>
+    <div class="d-row bg-d-blue">
+      <section
+        class="grid-col flex flex-col text-center items-center justify-center py-20 px-10 md:text-start md:items-start md:justify-between md:px-20">
+        <section class="a-col pb-10 md:pb-0">
+          <h1 class="font-semibold text-white text-3xl pb-5">Get early access today</h1>
+          <p class="text-white leading-7 max-w-[350px] pb-10 md:max-w-[500px]">It only takes a minute to sign up and our
+            free starter tier is extremely generous.
+            If you have any questions, our support team would be happy to help you.</p>
+          <div class="flex flex-col text-center items-center justify-center gap-3">
+            <input onclick=""
+              class="block md:hidden md:object-cover md:w-full border border-black rounded px-5 py-2 min-w-[280px]"
+              type="text" placeholder="email@example.com" />
+            <button
+              class="block md:hidden md:object-cover md:w-full border border-transparent rounded bg-b-blue px-5 py-2 min-w-[280px] text-white font-semibold"
+              onclick="">Get Started For Free</button>
+          </div>
+        </section>
+        <section class="b-col">
+          <div class="md:flex md:flex-col md:gap-5 md:w-[450px] md:mr-14 ">
+            <input class="hidden md:block md:object-cover md:w-full border border-black rounded px-5 py-2 " type="text"
+              placeholder="email@example.com" />
+            <button
+              class="hidden md:block md:object-cover md:w-2/4 md:text-[14px] md:whitespace-nowrap border border-transparent rounded bg-b-blue px-5 py-2 text-white font-semibold"
+              onclick="">Get Started For Free</button>
+          </div>
+        </section>
+      </section>
+    </div>
+    <!------------------------------------------------------------------------------------------------>
+    <div class="e-row bg-v-d-blue text-white">
+      <table
+        class="border border-solid border-transparent hidden md:block md:object-cover md:w-full px-20 py-14 table-auto border-collapse">
+        <thead>
+          <th class="pb-6 "><img class="" src="./images/logo.svg" alt="logo" /></th>
+        </thead>
+        <tbody>
+          <tr class="">
+            <td class="">
+              <div class="flex pb-5">
+                <img src="./images/icon-phone.svg" width="20px" height="20px" alt="icon-phone" />
+                <div class="flex flex-col ml-4">
+                  <p>Phone: +1-543-123-4567</p>
+                </div>
+              </div>
+            </td>
+            <td class="pl-60 hover:text-d-blue"><a href="#">About Us</a></td>
+            <td class="pl-60 hover:text-d-blue"><a href="#">Contact Us</a></td>
+            <td class="pl-60 hover:text-d-blue"><img
+                class="hover:bg-d-blue cursor-pointer border border-solid border-white rounded-full p-1" href="#"
+                src="./images/facebook.png" width="25px" height="25px" alt="icon-phone" /></td>
+            <td class="pl-3"><img
+                class="hover:bg-d-blue cursor-pointer border border-solid border-white rounded-full p-1" href="#"
+                src="./images/twiter.png" width="25px" height="25px" alt="icon-phone" /></td>
+            <td class="pl-3"><img
+                class="hover:bg-d-blue cursor-pointer border border-solid border-white rounded-full p-1" href="#"
+                src="./images/insta.png" width="25px" height="25px" alt="icon-phone" /></td>
+          </tr>
+          <tr class="">
+            <td>
+              <div class="flex pb-5">
+                <img src="./images/icon-email.svg" width="20px" height="20px" alt="icon-email" />
+                <div class="flex flex-col ml-4">
+                  <p>example@fylo.com</p>
+                </div>
+              </div>
+            </td>
+            <td class="pl-60 hover:text-d-blue"><a href="#">Jobs</a></td>
+            <td class="pl-60 hover:text-d-blue"><a href="#">Terms</a></td>
+          </tr>
+          <tr class="">
+            <td></td>
+            <td class="pl-60 pb-5 pt-3 hover:text-d-blue"><a href="#">Press</a></td>
+            <td class="pl-60 hover:text-d-blue"><a href="#">Privacy</a></td>
+          </tr>
+          <tr class="">
+            <td></td>
+            <td class="pl-60 hover:text-d-blue"><a href="#">Blog</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <!------------------------------------------------------------------------------------------------>
+      <div class="md:hidden md:object-cover flex flex-col px-20 py-10">
+        <div>
+          <img class="pb-10 fill-white " src="./images/logo.svg" alt="logo" />
+        </div>
+        <div class="flex pb-5">
+          <img src="./images/icon-phone.svg" width="20px" height="20px" alt="icon-phone" />
+          <div class="flex flex-col ml-4">
+            <p>Phone: +1-543-123-4567</p>
+          </div>
+        </div>
+        <div class="flex pb-10">
+          <img src="./images/icon-email.svg" width="20px" height="20px" alt="icon-email" />
+          <div class="flex flex-col ml-4">
+            <p>example@fylo.com</p>
+          </div>
+        </div>
+        <div class="pb-10 leading-loose flex flex-col ">
+          <a class="hover:text-d-blue" href="#">About Us</a>
+          <a class="hover:text-d-blue" href="#">Jobs</a>
+          <a class="hover:text-d-blue" href="#">Press</a>
+          <a class="hover:text-d-blue" href="#">Blog</a>
+        </div>
+        <div class="pb-10 leading-loose flex flex-col">
+          <a class="hover:text-d-blue" href="#">Contact Us</a>
+          <a class="hover:text-d-blue" href="#">Terms</a>
+          <a class="hover:text-d-blue" href="#">Privacy</a>
+        </div>
+        <div class="flex flex-row gap-4 pb-10 pl-[50%]">
+          <img class="border border-solid border-white rounded-full p-1 cursor-pointer hover:bg-d-blue" href="#"
+            src="./images/facebook.png" width="25px" height="25px" alt="icon-phone" />
+          <img class="border border-solid border-white rounded-full p-1 cursor-pointer hover:bg-d-blue" href="#"
+            src="./images/twiter.png" width="25px" height="25px" alt="icon-phone" />
+          <img class="border border-solid border-white rounded-full p-1 cursor-pointer hover:bg-d-blue" href="#"
+            src="./images/insta.png" width="25px" height="25px" alt="icon-phone" />
+        </div>
+      </div>
+    </div>
+    <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Kim</a>.
+    </p>
+  </footer> -->
+  </main>
+</body>
+
+</html>
